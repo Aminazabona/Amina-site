@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+}
+.top-bar{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: darkgreen;
+    justify-content: space-between;
+    height: 40px;
+   
+}
+.top-bar p{
+    margin-left: 20px;
+}
+.top-bar1{
+    display: flex;
+    gap: 15px;
+}
+.top-bar1 p{
+      margin-right: 20px;
+}
+.top-bar span{
+    font-family: sans-serif;
+}

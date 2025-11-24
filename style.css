@@ -1,130 +1,438 @@
-body{
-    margin: 0;
-    padding: 0;
-    margin-bottom: 5px;
+/* Styles de base */
+*{
+  transition: all 0.3s ease; /* Transition ajustée pour une meilleure performance */
+    box-sizing: border-box;
 }
+body{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+    font-family: sans-serif;
+    background-color: #f4f6f8; /* Couleur d'arrière-plan claire */
+}
+
+/* --- Top Bar --- */
 .top-bar{
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: darkgreen;
-    justify-content: space-between;
-    height: 40px;
-    color: white;
-   
+  display: flex;
+  align-items: center;
+  background-color: darkgreen;
+  justify-content: space-between;
+  height: 40px;
+  color: white;
+  padding: 0 20px;
 }
 .top-bar p{
-    margin-left: 20px;
+  margin: 0; /* Suppression des marges inutiles */
+}
+.top-bar p:nth-child(2) {
+    font-weight: bold; /* Mettre en gras "Get 50% Off..." */
 }
 .top-bar1{
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
-.top-bar1 p{
-      margin-right: 20px;
-}
-.top-bar span{
-    font-family: sans-serif;
-}
+
+/* --- Navigation Principale (sidebar) --- */
 .sidebar{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.sidebar img{
-    color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
 }
 .shop{
-    display: flex;
-    padding: 15px;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .shop i{
-    padding: 15px;
+  padding-right: 5px;
+    font-size: 24px;
+    color: darkgreen;
 }
 .shop h3{
-    color: darkgreen;
+  color: darkgreen;
+    font-size: 20px;
 }
-.text1{
-    padding: 15px;
+/* Fusion et simplification des éléments de navigation */
+.text1 { 
+    display: flex;
+    align-items: center;
     gap: 15px;
-    margin: 10px;
+    margin-right: auto;
+    margin-left: 30px;
+    padding: 0;
+    font-weight: 500;
 }
-.text2 {
-    margin-left: 10px;
+.text1 p {
+    color: darkgreen;
+    font-weight: bold;
 }
-.text1 span{
-     font-family: sans-serif;
-}
-.text3{
+.text3 {
     display: flex;
     gap: 30px;
-    padding: 30px;
-    margin: 10px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
-.text3 input{
-    border-radius: 10px;
-    padding: 5px;
+.text3 span {
+    color: #333;
 }
+
 .text4{
     display: flex;
-    gap: 10px;
-    padding: 32px;
-    margin: 10px;
-}
-.text5{
-    display: flex;
-    padding: 15px;
-    margin: 10px;
-}
-.text5 p{
-    margin-right: 20px;
-}
-.text6{
-    display: flex;
-    background-color:pink ;
-    margin: 20px;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    gap: 15px; /* Écart réduit pour les icônes */
+    margin: 0;
+    padding: 0 10px;
 }
-.text7{
+.text4 i {
+    color: #333;
+}
+.text4 input {
+    border-radius: 20px;
+    padding: 8px 15px;
+    height: 40px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+.text5 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.text5 i {
+    color: #333;
+}
+.text5 p {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* --- Hero Banner --- */
+.text6{
+  display: flex;
+  align-items: center;
+  background-color: #FFD9E8;
+  height: 40vh;
+  margin: 20px;
+  border-radius: 10px;
+  justify-content: space-around;
+  position: relative;
+    overflow: hidden;
+    min-height: 250px;
+}
+.text7 {
     display: flex;
     flex-direction: column;
-    margin-right: 100px;
-   
+    z-index: 10;
 }
-.text7 h2{
-    margin-left: 10px;
-    margin-bottom: 10px;
+.text7 h2, .text7 h3 {
     color: darkgreen;
-
+    margin: 0;
+    line-height: 1.1;
+    font-size: 2.5rem;
 }
-.text7 h3{
-    margin-left: 10px;
-    margin-bottom: 20px;
-    margin-top: 1px;
-    color: darkgreen;
+.text7 h2 {
+    font-weight: 400;
 }
 .text7 button{
-    padding: 10px;
-    width: 90px;
-    margin-left: 10px;
-    border-radius: 10px;
-    background-color: darkgreen;
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    font-size: 16px;
 }
-.text8{
+.text8 {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.text8 img {
+    max-height: 100%;
+    max-width: 350px;
+    object-fit: contain;
+}
+
+/* --- Filter Bar --- */
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+.btn1{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Important pour le responsive */
+}
+.btn1 button{
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(227, 232, 238);
+  cursor: pointer;
+    font-weight: 500;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0 15px;
 }
-.text8 img{
-    margin-left:100px;
-    max-width: 100%;
-    height: auto;
+.btn1 span{
+  margin-left: 5px;
+}
+.btn2{
+  display: flex;
+  align-items: center;
+}
+.btn2 button{
+  margin-right: 0;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  border: none;
+    background-color: rgb(227, 232, 238);
+    font-weight: 500;
+}
+button:hover{
+  cursor: pointer; /* Correction du curseur */
+  background-color: #c9c9c9;
+}
+
+/* --- Product Grid --- */
+.title{
+  margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.Product-card{
+    /* La bordure et le padding sont appliqués sur la section parent */
+    padding: 15px 20px;
+  display: block; /* Supprime le display: grid inutile ici */
+    border: none;
+}
+div.photo{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes pour le bureau */
+  gap: 20px;
+}
+div.amina{
+  background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+div.amina img{
+  height: 180px; /* Hauteur ajustée */
+  width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+div.amina:hover img{
+  border-radius: 10px;
+}
+div.amina h4 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+div.amina span {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+div.amina h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgreen;
+    margin: 0 0 15px 0;
+}
+div.amina button{
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+    border: 1px solid darkgreen;
+    background-color: white;
+    color: darkgreen;
+    font-weight: bold;
+}
+.amina2{
+  background-color: darkgreen;
+  color: white;
 }
 
 
+/* ================================================= */
+/*        MEDIA QUERIES           */
+/* ================================================= */
 
+/* --- Tablet (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    /* Navigation */
+    .text1 { /* Liens de navigation */
+        gap: 10px;
+        margin-left: 15px;
+    }
+    .text3 {
+        gap: 15px;
+    }
+    .text4 input { /* Barre de recherche */
+        width: 180px;
+    }
+    
+    /* Hero Banner */
+    .text6 {
+        gap: 50px;
+        margin: 10px;
+        padding: 0 30px;
+        height: 35vh;
+    }
+    .text7 h2, .text7 h3 {
+        font-size: 2rem;
+    }
+    .text8 {
+        right: 20px;
+    }
+    .text8 img {
+        max-width: 300px;
+    }
 
+    /* Filters (Affichage des filtres sur une seule ligne) */
+    .btn {
+        margin: 10px;
+    }
+    .btn1 button:nth-child(5), /* Material */
+    .btn1 button:nth-child(6) { /* Offer */
+        display: none; /* Cache les filtres moins importants */
+    }
 
+    /* Product Grid */
+    div.photo{
+    grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
+  }
+}
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* Top Bar */
+    .top-bar p:nth-child(2), /* Cache le texte central de l'offre */
+    .top-bar1 { /* Cache les sélecteurs de langue/localisation */
+        display: none;
+    }
+    .top-bar {
+        justify-content: center;
+    }
+
+    /* Navigation Principale */
+    .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .text1, .text3, .text5 { /* Cache les liens de navigation pour simuler un menu mobile */
+        display: none;
+    }
+    .text4 { /* Barre de recherche et icônes sur une seule ligne */
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .text4 input {
+        width: 60%;
+    }
+    .shop, .text5 {
+        margin-bottom: 5px;
+    }
+    
+    /* Hero Banner (Mise en page verticale) */
+    .text6 {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+    .text7 {
+        order: 2; /* Place le texte sous l'image */
+        align-items: center;
+    }
+    .text7 h2, .text7 h3 {
+        font-size: 1.5rem;
+    }
+    .text8 {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        order: 1; /* Place l'image en haut */
+        height: 150px;
+    }
+    .text8 img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    /* Filter Bar */
+    .btn {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .btn1 {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* Afficher seulement les 3 premiers filtres + le bouton All Filters */
+    .btn1 button {
+        width: 110px;
+        font-size: 12px;
+        display: none;
+    }
+    .btn1 button:nth-child(1),
+    .btn1 button:nth-child(2),
+    .btn1 button:nth-child(3),
+    .btn1 button:nth-child(7) { /* Assurez-vous que le 7ème bouton est 'All Filters' */
+        display: flex;
+    }
+    .btn2 {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .btn2 button {
+        margin-right: 0;
+        width: 110px;
+        font-size: 12px;
+    }
+
+    /* Product Grid */
+    div.photo{
+    grid-template-columns: 1fr 1fr; /* 2 colonnes pour mobile */
+    gap: 10px;
+  }
+    .title {
+        margin-left: 10px;
+    }
+    .Product-card {
+        padding: 10px;
+    }
+    div.amina img {
+        height: 100px;
+    }
+    div.amina button {
+        height: 35px;
+        font-size: 12px;
+    }
+}
